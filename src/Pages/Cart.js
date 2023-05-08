@@ -10,11 +10,11 @@ const Cart = () => {
       return cart.reduce((acc, item) => {
         return acc + item.price * item.quantity;
       }, 0);
-    }, [cart.length]);
+    }, [cart]);
     
     useEffect(() => {
       setTotal(calculateTotal);
-    }, [calculateTotal]);
+    }, [cart.length]);
 
     const handleInc = (id) =>{
         const updatedCart =  cart.map(item =>{
