@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Hero from '../components/Hero'
 import ProductCard from '../components/ProductCard'
-import Stats from '../components/Stats'
 import Categories from '../components/Categories'
 
 const Home = () => {

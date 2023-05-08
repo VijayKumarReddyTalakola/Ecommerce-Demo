@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navigation =[
   {
@@ -62,7 +62,6 @@ const Header = () => {
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </button>
-
           </Link>
         </div>
       </header>

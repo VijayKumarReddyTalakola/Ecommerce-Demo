@@ -13,7 +13,7 @@ const CategoryProducts = () => {
         setProducts(data);
       };
       fetchProducts();
-    }, []);
+    }, [name]);
 
   return (
     <>

@@ -28,7 +28,7 @@ const FeatureCard = ({cards}) => {
                 <p className="leading-relaxed text-base">
                   {`Get all exclusive ${card} items at a reasonable price.`}
                 </p>
-                <a className="mt-3 text-indigo-500 inline-flex items-center">
+                <div className="mt-3 text-indigo-500 inline-flex items-center">
                   Buy Now
                   <svg
                     fill="none"
@@ -41,7 +41,7 @@ const FeatureCard = ({cards}) => {
                   >
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>
-                </a>
+                </div>
               </div>
             </div>
           </Link>

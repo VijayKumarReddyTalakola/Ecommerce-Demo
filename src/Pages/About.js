@@ -7,9 +7,9 @@ const About = () => {
 <section className="text-gray-600 body-font overflow-hidden">
   <div className="p-2">
     <div className=" md:flex flex-row  ">
-      <div className="px-10 py-10 md:w-1/2 flex flex-col items-start">
-        <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">Pinterest DIY dreamcatcher gentrify single-origin coffee</h2>
-        <p className="leading-relaxed mb-8">Live-edge letterpress cliche, salvia fanny pack humblebrag narwhal portland. VHS man braid palo santo hoodie brunch trust fund. Bitters hashtag waistcoat fashion axe chia unicorn. Plaid fixie chambray 90's, slow-carb etsy tumeric. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi repellendus officiis saepe, labore, ipsam dignissimos ex eum, molestiae aliquid quisquam rem dolor reprehenderit voluptate earum. Dolor veritatis soluta eos praesentium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum asperiores ut quae nesciunt ex nostrum, iusto deserunt maxime pariatur consequuntur soluta dolorem aspernatur? Labore quam autem officia accusantium quae dolores.</p>
+      <div className="p-7 md:w-1/2 md:p-10 flex flex-col items-start">
+        <h2 className="sm:text-xl  md:text-2xl title-font font-medium text-gray-900 mt-4 mb-4">Pinterest DIY dreamcatcher gentrify single-origin coffee</h2>
+        <p className="leading-relaxed mb-8"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi repellendus officiis saepe, labore, ipsam dignissimos ex eum, molestiae aliquid quisquam rem dolor reprehenderit voluptate earum. Dolor veritatis soluta eos praesentium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum asperiores ut quae nesciunt ex nostrum, iusto deserunt maxime pariatur consequuntur soluta dolorem aspernatur? Labore quam autem officia accusantium quae dolores.</p>
         <div className="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100  w-full">
           <Link  to='/contact' className="text-indigo-500 inline-flex items-center">Know More
             <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -19,8 +19,8 @@ const About = () => {
           </Link>
         </div>
       </div>
-      <div class=" flex flex-col items-start sm:px-10 lg:w-1/2 md:w-1/2">
-        <img src="./about.png" alt="" classNameName="w-48 h-64 mx-12" />
+      <div class="flex items-center p-2 lg:w-1/2 md:w-1/2 md:pb-20 ">
+        <img src="./about.png" alt="..."  />
       </div>
     </div>
   </div>
