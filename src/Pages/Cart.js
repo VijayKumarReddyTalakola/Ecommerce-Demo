@@ -10,7 +10,7 @@ const Cart = () => {
       return cart.reduce((acc, item) => {
         return acc + item.price * item.quantity;
       }, 0);
-    }, [cart]);
+    }, [cart.length]);
     
     useEffect(() => {
       setTotal(calculateTotal);
