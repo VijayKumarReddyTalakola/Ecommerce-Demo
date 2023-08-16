@@ -14,7 +14,7 @@ const Cart = () => {
     
     useEffect(() => {
       setTotal(calculateTotal);
-    }, [cart.length]);
+    }, [calculateTotal]);
 
     const handleInc = (id) =>{
         const updatedCart =  cart.map(item =>{
