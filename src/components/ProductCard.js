@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 const ProductCard = ({products}) => {
   return (
-    <section className="text-gray-600 body-font mt-5 px-5 sm:px-20">
-      <div className="flex flex-col text-center w-full mt-20">
+    <section className="text-gray-600 body-font mt-5 px-5 sm:px-12 lg:px-20">
+      <div className="flex flex-col text-center w-full mt-7 sm:mt-20">
         <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">PRODUCTS</h2>
         {(products.length>12) ? <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">ALL PRODUCTS</h1> 
         :  <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">MOST POPULAR PRODUCTS</h1>}
       </div>
-      <div className="container px-5 py-24 mx-auto">
+      <div className="px-5 py-12 sm:py-16 lg:py-20 mx-auto">
         <div className="flex flex-wrap -m-4 ">
           {products?.map((product) => {
             console.log(product, "product");

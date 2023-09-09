@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const FeatureCard = ({cards}) => {
   return (
-    <section className="text-gray-600 body-font cursor-pointer  px-5 sm:px-20">
-      <div className="container px-2 py-20 mx-auto ">
-        <div className="flex flex-col text-center w-full mb-20">
+    <section className="text-gray-600 body-font cursor-pointer px-5 sm:px-16 lg:px-20">
+      <div className="container px-2 py-10 sm:py-16 mx-auto ">
+        <div className="flex flex-col text-center w-full mb-10 sm:mb-20">
           <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">
             Search by Categories
           </h2>

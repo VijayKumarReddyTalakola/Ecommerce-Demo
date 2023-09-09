@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,useMemo} from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Cart = () => {
@@ -6,15 +6,12 @@ const Cart = () => {
     const [total,setTotal] = useState(0)
     const cart = JSON.parse(localStorage.getItem('cart')) || []
 
-    const calculateTotal = useMemo(() => {
-      return cart.reduce((acc, item) => {
-        return acc + item.price * item.quantity;
-      }, 0);
-    }, [cart]);
-    
-    useEffect(() => {
-      setTotal(calculateTotal);
-    }, [cart.length]);
+     useEffect(() => {
+       const total = cart.reduce((acc, item) => {
+         return acc + item.price * item.quantity;
+       }, 0);
+       setTotal(total);
+     }, [cart]);
 
     const handleInc = (id) =>{
         const updatedCart =  cart.map(item =>{
@@ -48,7 +45,12 @@ const Cart = () => {
         navigate("/cart");
     };
 
-    if(cart.length === 0) return <div className=' flex justify-center items-center text-4xl min-h-[50vh]'>Cart is Empty</div>
+    const emptyCart = () => {
+        localStorage.setItem("cart", JSON.stringify([]))
+        navigate("/cart");
+    };
+
+    if(cart.length === 0) return <div className=' flex justify-center items-center text-4xl min-h-[48vh]'>Cart is Empty</div>
 
   return (
     <div className="mx-2 mt-7 md:mx-7">
@@ -115,7 +117,7 @@ const Cart = () => {
                     <span>Total Cost</span>
                     <span>${(total + 10).toFixed(2)}</span></div>
                 </div>
-                <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
+                <button onClick={()=>emptyCart()} className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
             </div>
         </div>
     </div>
@@ -123,9 +125,3 @@ const Cart = () => {
 }
 
 export default Cart
-
-
-
-
-
-
