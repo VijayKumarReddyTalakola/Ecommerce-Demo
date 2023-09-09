@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState ,useMemo} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Cart = () => {
@@ -6,12 +6,15 @@ const Cart = () => {
     const [total,setTotal] = useState(0)
     const cart = JSON.parse(localStorage.getItem('cart')) || []
 
-     useEffect(() => {
-       const total = cart.reduce((acc, item) => {
-         return acc + item.price * item.quantity;
-       }, 0);
-       setTotal(total);
-     }, [cart]);
+    const calculateTotal = useMemo(() => {
+      return cart.reduce((acc, item) => {
+        return acc + item.price * item.quantity;
+      }, 0);
+    }, [cart]);
+    
+    useEffect(() => {
+      setTotal(calculateTotal);
+    }, [calculateTotal]);
 
     const handleInc = (id) =>{
         const updatedCart =  cart.map(item =>{
